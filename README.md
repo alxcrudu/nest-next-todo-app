@@ -26,7 +26,6 @@
 </div>
 
 The backend is a NestJs app with fastify
-<br />
 
 <div align='center'>
   <img src='/repo-assets/nest.png'>
@@ -34,7 +33,7 @@ The backend is a NestJs app with fastify
 
 \
 **To visit the Swagger API Docs:** \
-» Go to: `localhost:8080/api` \
+» Go to: `localhost:8080/api` 
 
 <div align='center'>
   <img src='/repo-assets/swagger.png'>
