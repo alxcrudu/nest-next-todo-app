@@ -26,7 +26,7 @@
 </div>
 
 The backend is a NestJs app with fastify
-\
+<br />
 
 <div align='center'>
   <img src='/repo-assets/nest.png'>
