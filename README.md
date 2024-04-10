@@ -25,7 +25,8 @@
   <img src='/repo-assets/docker.png'>
 </div>
 
-The backend is a NestJs app with fastify \
+The backend is a NestJs app with fastify
+\
 
 <div align='center'>
   <img src='/repo-assets/nest.png'>
