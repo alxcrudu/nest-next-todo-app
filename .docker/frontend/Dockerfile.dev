@@ -1,0 +1,12 @@
+FROM node:lts-alpine
+
+WORKDIR /app
+
+COPY ./frontend/package.json ./
+COPY ./frontend/pnpm-lock.yaml ./
+
+RUN npm i pnpm -g
+
+RUN pnpm install
+
+CMD ["pnpm", "run", "dev"]

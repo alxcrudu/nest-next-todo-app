@@ -1,0 +1,52 @@
+name: nest-next-to-do-app
+
+services:
+  database:
+    image: postgres:latest
+    container_name: nest-next-to-do-app_postgres
+    restart: always
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    env_file:
+      - .env.local
+    volumes:
+      - ./.docker/pgdata:/var/lib/postgresql/data
+    networks:
+      - nest-next-to-do-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: .docker/server/Dockerfile.dev
+    container_name: nest-next-to-do-app_backend
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    env_file:
+      - .env.local
+    depends_on:
+      - database
+    networks:
+      - nest-next-to-do-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: .docker/frontend/Dockerfile.dev
+    container_name: nest-next-to-do-app_frontend
+    restart: always
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    env_file:
+      - .env.local
+    networks:
+      - nest-next-to-do-network
+
+volumes:
+  database:
+
+networks:
+  nest-next-to-do-network:

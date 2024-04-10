@@ -1,0 +1,14 @@
+FROM node:lts-alpine
+
+WORKDIR /app
+
+COPY ./frontend /app
+
+RUN npm i pnpm -g
+
+RUN pnpm install
+
+RUN pnpm run build
+
+CMD ["pnpm", "run", "start"]
+
