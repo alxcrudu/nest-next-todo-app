@@ -16,7 +16,6 @@
 \
 » DEV environment (with hot reload): `make local-run` 🚀 \
 » PROD-like environment: `make prod-run` 🚀 \
-\
 
 <div align='center'>
   <img src='/repo-assets/makefile.png'>
