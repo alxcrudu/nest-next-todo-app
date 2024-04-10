@@ -10,8 +10,8 @@
 
 <div align='center'>
   <img src='/repo-assets/app.png'>
-</div>
-
+</div> \
+\
 **To run this project:** \
 » DEV environment (with hot reload): `make local-run` 🚀 \
 » PROD-like environment: `make prod-run` 🚀 \
